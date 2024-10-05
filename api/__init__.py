@@ -1,0 +1,3 @@
+from api.on_close_blueprint import on_close_router
+from api.on_init_blueprint import on_init_router
+from api.on_query_blueprint import on_query_router
