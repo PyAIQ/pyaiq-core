@@ -15,3 +15,11 @@ def on_query(func: Callable):
 def on_close(func: Callable):
     event_handlers['on_close'] = func
     return func
+
+def on_submit(func: Callable):
+    event_handlers['on_submit'] = func
+    return func
+
+def on_store(func: Callable):
+    event_handlers['on_store'] = func
+    return func

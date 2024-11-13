@@ -1,3 +1,5 @@
+import logging
+
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
 from core import event_handlers
@@ -19,4 +21,4 @@ async def websocket_endpoint(websocket: WebSocket):
             else:
                 await websocket.send_json({"error": f"Unknown event '{event}'"})
     except WebSocketDisconnect:
-        print("WebSocket disconnected")
+        logging.WARN("WebSocket disconnected")
